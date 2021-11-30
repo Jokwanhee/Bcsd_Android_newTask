@@ -4,21 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <ListView
-        android:id="@+id/list_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#8BC34A"/>
+    tools:context=".SecondActivity">
 
     <Button
-        android:id="@+id/page2_button"
+        android:id="@+id/page1_button"
         android:layout_width="150dp"
         android:layout_height="80dp"
         android:backgroundTint="#ffffff"
-        android:padding="5dp"
-        android:text="Check\nRecyclerView"
+        android:text="Check\nListView"
         android:textSize="15dp"
         android:textColor="#000000"
         android:outlineProvider="bounds"
@@ -29,6 +22,16 @@
         app:layout_constraintVertical_bias="0"
         app:layout_constraintHorizontal_bias="1"/>
 
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/recycler_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
